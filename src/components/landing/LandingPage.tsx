@@ -233,7 +233,7 @@ export function LandingPage() {
         </div>
         <span>Virtual Clinic Reception</span>
         <span>LiveKit · Deepgram · Cartesia · Beyond Presence</span>
-        <span style={{ color: "rgba(232,245,241,0.3)" }}>© 2025 Plaban Datta</span>
+        <span style={{ color: "rgba(232,245,241,0.3)" }}>© 2026 Plaban Datta</span>
       </footer>
     </div>
   );
