@@ -126,7 +126,7 @@ export function AvatarStage({ phase, latestSpeaker, agentAudioLevel, isMuted, av
         <span className="status-pill">
           {phase === "active" ? "Live with Cura" : phase === "ended" ? "Call ended" : "Virtual Front Desk"}
         </span>
-        <span>{phase === "ended" ? "Call completed" : "Cura Health Room"}</span>
+        <span>{phase === "ended" ? "Call completed" : ""}</span>
       </div>
 
       <div className="stage-scene">

@@ -7,11 +7,25 @@ function renderSummary(summary?: Record<string, unknown> | null) {
   }
 
   if (typeof summary.summary === "string") {
+    try {
+      const parsedSummary = JSON.parse(summary.summary) as unknown;
+      if (
+        parsedSummary &&
+        typeof parsedSummary === "object" &&
+        "ai_summary" in parsedSummary &&
+        typeof parsedSummary.ai_summary === "string"
+      ) {
+        return parsedSummary.ai_summary;
+      }
+    } catch {
+      return summary.summary;
+    }
+
     return summary.summary;
   }
 
-  if (typeof summary.reason === "string") {
-    return `Call ended: ${summary.reason}`;
+  if (typeof summary.ai_summary === "string") {
+    return summary.ai_summary;
   }
 
   return JSON.stringify(summary, null, 2);
