@@ -308,11 +308,11 @@ export function CallExperience() {
 
   useEffect(() => cleanupCall, [cleanupCall]);
 
-  const workerReady  = getCheckStatus(warmup?.checks.worker) === "ready";
+  const workerReady  = ["external", "ready"].includes(getCheckStatus(warmup?.checks.worker));
   const dbReady      = getCheckStatus(warmup?.checks.supabase) === "ready";
   const overallReady = isWarmupReady(warmup);
-  // Show while warming up OR briefly after ready (WarmupModal handles its own auto-dismiss)
-  const showWarmupModal = !warmupModalDismissed && phase === "idle" && (!isWarmupChecking || overallReady);
+  // Mount immediately while idle so long cold-start checks still show the warmup experience.
+  const showWarmupModal = !warmupModalDismissed && phase === "idle";
 
   const activeDetailPanel =
     activeDetailTab === "summary" ? (

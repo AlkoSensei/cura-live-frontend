@@ -107,7 +107,7 @@ export function LandingPage() {
           <a href="#stats">Results</a>
         </div>
         <div className="landing-nav-right">
-          <Link href="/dashboard" className="landing-nav-cta">Open Dashboard →</Link>
+          <Link href="/dashboard" className="landing-nav-cta">Dashboard</Link>
         </div>
       </nav>
 
