@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const TICKER_ITEMS = [
-  "LiveKit voice", "Deepgram STT", "Cartesia TTS", "Beyond Presence avatar",
+  "LiveKit voice", "Deepgram STT", "Sarvam TTS", "Tavus & Beyond Presence Avatars",
   "Tool calling", "Appointment booking", "Call summaries", "Slot availability",
   "Double-booking prevention", "Cost per call", "Claude LLM", "Supabase DB"
 ];
@@ -45,7 +45,7 @@ const FEATURES = [
   },
   {
     title: "6 Cura tools",
-    desc: "identify_user · fetch_slots · book · retrieve · cancel · modify — called intelligently mid-conversation.",
+    desc: "Identify patient · Fetch Slots · Book Appointment · Retrieve Appointments · Cancel Appointment · Modify Appointment — called intelligently mid-conversation.",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" strokeWidth="2" strokeLinecap="round">
         <circle cx="12" cy="12" r="10"/>
@@ -231,8 +231,8 @@ export function LandingPage() {
           </div>
           <span style={{ fontWeight: 600, color: "rgba(232,245,241,0.4)" }}>Cura Health</span>
         </div>
-        <span>Virtual Clinic Reception</span>
-        <span>LiveKit · Deepgram · Cartesia · Beyond Presence</span>
+        <span>Cura AI</span>
+        <span>LiveKit · Deepgram · Sarvam · Tavus · Beyond Presence</span>
         <span style={{ color: "rgba(232,245,241,0.3)" }}>© 2026 Plaban Datta</span>
       </footer>
     </div>
